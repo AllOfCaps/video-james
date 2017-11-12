@@ -14,19 +14,19 @@ void SneakManStats(FCyberRunner& Runner);
 
 int main()
 {	
-	//constexpr int TEAM_MAX = 4;
+	constexpr int TEAM_MAX = 4;
 	
-	//FCyberRunner Team1[TEAM_MAX];
-	//FCyberRunner Team2[TEAM_MAX];
+	FCyberRunner Team1[TEAM_MAX];
+	FCyberRunner Team2[TEAM_MAX];
 	
-	
-	/*for(int i = 1; i <= TEAM_MAX - 1; i++)
+	srand(time(NULL));
+	for(int i = 0; i <= TEAM_MAX - 1; i++)
 	{
 		AssignClass(Team1[i]);
 		CreateStats(Team1[i]);
 		
 	}
-	for(int i = 1; i <= TEAM_MAX - 1; i++)
+	for(int i = 0; i <= TEAM_MAX - 1; i++)
 	{
 		AssignClass(Team2[i]);
 		CreateStats(Team2[i]);
@@ -50,8 +50,8 @@ int main()
 	std::cout << Team2[1].GetTypeName() << std::endl;
 	std::cout << Team2[2].GetTypeName() << std::endl;
 	std::cout << Team2[3].GetTypeName() << std::endl;
-	*/
-	srand(time(NULL));
+	
+	/*srand(time(NULL));
 
 	FCyberRunner BoiOne;
 	FCyberRunner BoiTwo;
@@ -77,7 +77,7 @@ int main()
 	std::cout << "SPD: " << BoiOne.GetSPD() << "      " << BoiTwo.GetSPD() << "      " << BoiThree.GetSPD() << "      " << BoiFour.GetSPD() << std::endl;
 	std::cout << "ARM: " << BoiOne.GetARM() << "      " << BoiTwo.GetARM() << "      " << BoiThree.GetARM() << "      " << BoiFour.GetARM() << std::endl;
 	std::cout << "EVA: " << BoiOne.GetEVA() << "      " << BoiTwo.GetEVA() << "      " << BoiThree.GetEVA() << "      " << BoiFour.GetEVA() << std::endl;
-
+	*/
 	return 0;
 }
 
@@ -103,11 +103,11 @@ void CreateStats(FCyberRunner& Runner)
 
 void FiteBoiStats(FCyberRunner& Runner)
 {
-	int CA = rand() % 100 + 60;
-	int STR = rand() % 100 + 75;
-	int ACC = rand() % 80 + 40;
-	int COM = rand() % 40 + 1;
-	int SPD = rand() % 50 + 35;
+	int CA = rand() % 100 + 60; // 60 - 100 possible
+	int STR = rand() % 25 + 75; // 75 - 100 possible
+	int ACC = rand() % 40 + 40; // 40 - 80 possible
+	int COM = rand() % 40 + 1;  // 1 - 40 possible
+	int SPD = rand() % 15 + 35; // 35 - 50 possible
 	int HP = (STR / 2);
 	
 	Runner.SetCA(CA);
@@ -122,11 +122,11 @@ void FiteBoiStats(FCyberRunner& Runner)
 	
 void HackerManStats(FCyberRunner& Runner)
 {
-	int CA = rand() % 40 + 15;
-	int STR = rand() % 40 + 1;
-	int ACC = rand() % 80 + 40;
-	int COM = rand() % 100 + 75;
-	int SPD = rand() % 80 + 40;
+	int CA = rand() % 40 + 15;  // 15 - 40 possible
+	int STR = rand() % 40 + 1;  // 1 - 40 possible
+	int ACC = rand() % 40 + 40; // 40 - 80 possible
+	int COM = rand() % 25 + 75;// 75 - 100 possible
+	int SPD = rand() % 40 + 40; // 40 - 80 possible
 	int HP = (STR / 2);
 	
 	Runner.SetCA(CA);
@@ -141,11 +141,11 @@ void HackerManStats(FCyberRunner& Runner)
 
 void ShootLadStats(FCyberRunner& Runner)
 {
-	int CA = rand() % 40 + 20;
-	int STR = rand() % 50 + 15;
-	int ACC = rand() % 100 + 80;
-	int COM = rand() % 40 + 20;
-	int SPD = rand() % 80 + 45;
+	int CA = rand() % 20 + 20;   // 20 - 40 possible ???
+	int STR = rand() % 35 + 15;  // 15 - 50 possible
+	int ACC = rand() % 20 + 80; // 80 - 100 possible
+	int COM = rand() % 20 + 20;  // 20 - 40 possible
+	int SPD = rand() % 35 + 45;  // 45 - 80 possible
 	int HP = (STR / 2);
 	
 	Runner.SetCA(CA);
@@ -160,11 +160,11 @@ void ShootLadStats(FCyberRunner& Runner)
 
 void SneakManStats(FCyberRunner& Runner)
 {
-	int CA = rand() % 100 + 80;
-	int STR = rand() % 100 + 75;
-	int ACC = rand() % 80 + 40;
-	int COM = rand() % 70 + 45;
-	int SPD = rand() % 100 + 60;
+	int CA = rand() % 20 + 80;   // 80 - 100 possible
+	int STR = rand() % 25 + 75;  // 75 - 100 possible
+	int ACC = rand() % 40 + 40;   // 40 - 80 possible
+	int COM = rand() % 25 + 45;   // 70 - 45 possible
+	int SPD = rand() % 40 + 60;  // 60 - 100 possible
 	int HP = (STR / 2);
 	
 	Runner.SetCA(CA);
